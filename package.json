@@ -1,0 +1,16 @@
+{
+  "name": "@andrew.oxenburgh/test-here",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha .",
+    "qa": "rm -rf ./node_modules && npm i && npm test && jscs ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  }
+}
