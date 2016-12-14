@@ -1,6 +1,6 @@
 let assert = require('assert');
 let json_to_div = require('./index');
-rm
+
 describe('json-to-divs-with-classes', function() {
   describe('parsing', function() {
     it('empty json should return an empty div', function() {
