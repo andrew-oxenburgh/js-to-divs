@@ -63,3 +63,7 @@ to:
      </div>
 </div>
 ```
+
+# Notes:
+
+This package has no production dependencies.
