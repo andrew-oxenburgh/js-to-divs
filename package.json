@@ -1,8 +1,8 @@
 {
   "name": "@andrew.oxenburgh/test-here",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Given a js object, output a tree of divs that reflect it",
-  "keywords": "json js transtorm div html",
+  "keywords": ["js", "json", "transform", "div", "formatting", "browse"],
   "main": "index.js",
   "scripts": {
     "test": "mocha .",
