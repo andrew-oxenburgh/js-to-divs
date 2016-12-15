@@ -73,7 +73,7 @@ Paste this in to runkit
 var divs = require("js-to-divs");
 var format = require("xml-formatter");
 
-format( '<html><header></header><body>' + divs({hello:'world'}, {indent:'          '}) + '</body></html>');
+format( '<html><header></header><body>' + divs({hello:'world'}) + '</body></html>');
 ```
 
 # Notes:
