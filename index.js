@@ -34,12 +34,13 @@ function div(str, className) {
   }
 }
 
-function json_to_div(js) {
+function json_to_div(js, opts) {
+  opts = opts || {className: ''}
   if (js == null) {
-    return div('');
+    return div('', opts.className, 0);
   }
 
-  return div(appendValues(js, ''), '', 0);
+  return div(appendValues(js, ''), opts.className, 0);
 }
 
 module.exports = json_to_div;
