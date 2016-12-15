@@ -1,6 +1,6 @@
 {
   "name": "json-to-divs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Given a js object, output a tree of divs that reflect it",
   "keywords": ["js", "json", "transform", "div", "formatting", "browse"],
   "main": "index.js",
