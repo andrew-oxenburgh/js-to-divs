@@ -70,7 +70,7 @@ Paste this in to runkit
 
 ```js
 
-var divs = require("json-to-divs");
+var divs = require("js-to-divs");
 var format = require("xml-formatter");
 
 format( '<html><header></header><body>' + divs({hello:'world'}, {indent:'          '}) + '</body></html>');
