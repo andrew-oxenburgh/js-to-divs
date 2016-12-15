@@ -64,9 +64,23 @@ to:
 </div>
 ```
 
+# Demo
+
+Paste this in to runkit
+
+```js
+
+var divs = require("json-to-divs");
+var format = require("xml-formatter");
+
+format( '<html><header></header><body>' + divs({hello:'world'}, {indent:'          '}) + '</body></html>');
+```
+
 # Notes:
 
 This package has no production dependencies.
+
+Maintain compatibility with node4+.
 
 # Collaboration
 
