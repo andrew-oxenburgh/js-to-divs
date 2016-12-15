@@ -25,9 +25,9 @@ to:
 from: 
 ```json
 {
-    'name1': 'value1', 
-    'name2': {
-        'sub-name': 'sub-value'
+    "name1": "value1", 
+    "name2": {
+        "sub-name": "sub-value"
     }
 }
 ```
@@ -46,7 +46,7 @@ to:
 from:
 ```json
 {
-  'arr1': ['1']
+  "arr1": ["1"]
 }
 
 ```
