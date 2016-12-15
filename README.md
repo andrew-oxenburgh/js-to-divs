@@ -10,8 +10,9 @@ This utility converts a json object in set of nested divs, with classes for easy
 
 It produces the html frag with no new lines or indentation. If you need this, try 'xml-formatter'.
 
-## Example
+## Examples
 
+### Empty Object
 from: 
 ```json
 {}
@@ -22,6 +23,7 @@ to:
 <div></div>
 ```
 
+### Object with sub-objects
 from: 
 ```json
 {
@@ -43,6 +45,7 @@ to:
 </div>
 ```
 
+### Object with an array
 from:
 ```json
 {
