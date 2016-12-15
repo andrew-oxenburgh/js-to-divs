@@ -1,9 +1,9 @@
 function appendValues(js, ret) {
-  for (let prop in js) {
+  for (var prop in js) {
     if (!js.hasOwnProperty(prop)) {
       continue;
     }
-    let entry = js[prop];
+    var entry = js[prop];
     if (Array.isArray(entry)) {
       ret += div(appendArray(entry, prop, ''), prop);
     } else if (typeof entry === 'object') {
@@ -16,8 +16,8 @@ function appendValues(js, ret) {
 }
 
 function appendArray(js, className, ret) {
-  for (let off in js) {
-    let entry = js[off];
+  for (var off in js) {
+    var entry = js[off];
     ret += div(entry, className + '-' + off);
   }
   return ret;
