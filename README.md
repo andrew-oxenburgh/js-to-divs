@@ -67,3 +67,7 @@ to:
 # Notes:
 
 This package has no production dependencies.
+
+# Collaboration
+
+Please run ```npm run qa```, for complete test and formatting checks

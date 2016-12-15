@@ -27,6 +27,12 @@ describe('json-to-divs-with-classes', function() {
       var actual_html = json_to_div(js);
       assert.equal(actual_html, expected_html);
     });
+    it('non-string property property', function() {
+      var js = {name: 2};
+      var expected_html = '<div><div class="name">2</div></div>';
+      var actual_html = json_to_div(js);
+      assert.equal(actual_html, expected_html);
+    });
     it('two properties', function() {
       var js = {'name1': 'value1', 'name2': 'value2'};
       var expected_html = '<div><div class="name1">value1</div><div class="name2">value2</div></div>';
@@ -42,6 +48,12 @@ describe('json-to-divs-with-classes', function() {
     it('sub sub objects', function() {
       var js = {'name1': 'value1', 'sub-obj1': {'sub-obj2': {'sub-obj-name': 'sub-obj-value'}}};
       var expected_html = '<div><div class="name1">value1</div><div class="sub-obj1"><div class="sub-obj2"><div class="sub-obj-name">sub-obj-value</div></div></div></div>';
+      var actual_html = json_to_div(js);
+      assert.equal(actual_html, expected_html);
+    });
+    it('ignore functions', function() {
+      var js = {hello: function() {}};
+      var expected_html = '<div></div>';
       var actual_html = json_to_div(js);
       assert.equal(actual_html, expected_html);
     });

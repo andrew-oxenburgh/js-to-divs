@@ -4,6 +4,9 @@ function appendValues(js, ret) {
       continue;
     }
     var entry = js[prop];
+    if (typeof entry === 'function') {
+      continue;
+    }
     if (Array.isArray(entry)) {
       ret += div(appendArray(entry, prop, ''), prop);
     } else if (typeof entry === 'object') {
