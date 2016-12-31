@@ -61,13 +61,19 @@ describe('json-to-divs-with-classes', function() {
   describe('arrays', function() {
     it('simple array', function() {
       var js = {'arr1': ['1']};
-      var expected_html = `<div><div class="arr1"><div class="arr1-0">1</div></div></div>`;
+      var expected_html = `<div><div class="arr1"><div class="arr1 member n0">1</div></div></div>`;
+      var actual_html = json_to_div(js);
+      assert.equal(actual_html, expected_html);
+    });
+    it('simple array', function() {
+      var js = {'arr1': ['1', '2']};
+      var expected_html = `<div><div class="arr1"><div class="arr1 member n0">1</div><div class="arr1 member n1">2</div></div></div>`;
       var actual_html = json_to_div(js);
       assert.equal(actual_html, expected_html);
     });
     it('array of objects', function() {
       var js = {'arr1': [{a:'b'}]};
-      var expected_html = `<div><div class="arr1"><div class="arr1-0"><div class="a">b</div></div></div></div>`;
+      var expected_html = `<div><div class="arr1"><div class="arr1 member n0"><div class="a">b</div></div></div></div>`;
       var actual_html = json_to_div(js);
       assert.equal(actual_html, expected_html);
     });
@@ -75,7 +81,7 @@ describe('json-to-divs-with-classes', function() {
   describe('provide a super class name', function() {
     it('super class name', function() {
       var js = {'arr1': ['1']};
-      var expected_html = `<div class="class-name"><div class="arr1"><div class="arr1-0">1</div></div></div>`;
+      var expected_html = `<div class="class-name"><div class="arr1"><div class="arr1 member n0">1</div></div></div>`;
       var actual_html = json_to_div(js, {className: 'class-name'});
       assert.equal(actual_html, expected_html);
     });

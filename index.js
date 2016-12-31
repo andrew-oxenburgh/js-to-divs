@@ -19,7 +19,7 @@ function appendValues(js, ret) {
 }
 
 function arrayMemberName(className, off) {
-   return className + '-' + off;
+   return className + ' member n' + off;
 }
 function appendArray(js, className, ret) {
   for (var off in js) {
