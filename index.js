@@ -8,7 +8,7 @@ function appendValues(js, ret) {
       continue;
     }
     if (Array.isArray(entry)) {
-      ret += div(appendArray(entry, prop, ''), prop);
+      ret += div(appendArray(entry, prop, ''), prop + ' array');
     } else if (typeof entry === 'object') {
       ret += div(appendValues(entry, ''), prop);
     } else {
