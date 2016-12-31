@@ -18,10 +18,17 @@ function appendValues(js, ret) {
   return ret;
 }
 
+function arrayMemberName(className, off) {
+   return className + '-' + off;
+}
 function appendArray(js, className, ret) {
   for (var off in js) {
     var entry = js[off];
-    ret += div(entry, className + '-' + off);
+    if(typeof entry === 'object'){
+       ret += div(appendValues(entry, ''), arrayMemberName(className, off));
+    }else{
+       ret += div(entry, arrayMemberName(className, off));
+    }
   }
   return ret;
 }

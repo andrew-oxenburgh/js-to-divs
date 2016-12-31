@@ -65,6 +65,12 @@ describe('json-to-divs-with-classes', function() {
       var actual_html = json_to_div(js);
       assert.equal(actual_html, expected_html);
     });
+    it('array of objects', function() {
+      var js = {'arr1': [{a:'b'}]};
+      var expected_html = `<div><div class="arr1"><div class="arr1-0"><div class="a">b</div></div></div></div>`;
+      var actual_html = json_to_div(js);
+      assert.equal(actual_html, expected_html);
+    });
   });
   describe('provide a super class name', function() {
     it('super class name', function() {

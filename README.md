@@ -76,6 +76,11 @@ var format = require("xml-formatter");
 format( '<html><header></header><body>' + divs({hello:'world'}) + '</body></html>');
 ```
 
+# Test
+Clone me, and run ```npm test```
+
+
+
 # Notes:
 
 This package has no production dependencies.
