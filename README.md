@@ -90,3 +90,15 @@ Maintain compatibility with node4+.
 # Collaboration
 
 Please run ```npm run qa```, for complete test and formatting checks
+
+
+
+
+sample
+```json
+{ id: 'id1', name2: { id: 'id2' } }
+```
+
+```html
+<div id="id1"><div class="id">id1</div><div class="name2" id="id2"><div class="id">id2</div></div></div>
+```
