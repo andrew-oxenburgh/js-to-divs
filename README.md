@@ -12,7 +12,7 @@ It produces the html frag with no new lines or indentation. If you need this, tr
 
 ## Examples
 
-See [Specification](http://./SPECIFICATION.md "Specification")
+See [Specification](SPECIFICATION.md)
 
 # Demo
 
