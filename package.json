@@ -12,8 +12,10 @@
   ],
   "main": "index.js",
   "scripts": {
+    "test-both": "npm run test && npm run test-with-report",
     "test": "mocha .",
-    "qa": "rm -rf ./node_modules && npm i && npm test && jscs ."
+    "test-with-report": "mocha . --reporter markdown > SPECIFICATION.md",
+    "qa": "rm -rf ./node_modules && npm i && npm test && jscs . && npm run test-with-report"
   },
   "license": "MIT",
   "devDependencies": {
