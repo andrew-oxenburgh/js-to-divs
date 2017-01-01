@@ -135,7 +135,7 @@ transforms to this xml
 test(data.inp, data.out, data.opts);
 ```
 
-### handles sub properties
+### handles sub-objects
  this json 
 ```json
 {
@@ -165,7 +165,7 @@ transforms to this xml
 test(data.inp, data.out, data.opts);
 ```
 
-### handles sub-objects
+### handles sub-sub-objects
  this json 
 ```json
 {
@@ -199,6 +199,27 @@ transforms to this xml
 test(data.inp, data.out, data.opts);
 ```
 
+### handles empty array
+ this json 
+```json
+{
+  "arr1": []
+}
+```
+transforms to this xml
+```xml
+<div>
+    <div class="arr1 array">
+    </div>
+</div>
+```
+
+.
+
+```js
+test(data.inp, data.out, data.opts);
+```
+
 ### handles array of one member
  this json 
 ```json
@@ -215,27 +236,6 @@ transforms to this xml
         <div class="arr1 member n0">
             1
         </div>
-    </div>
-</div>
-```
-
-.
-
-```js
-test(data.inp, data.out, data.opts);
-```
-
-### handles array with no members
- this json 
-```json
-{
-  "arr1": []
-}
-```
-transforms to this xml
-```xml
-<div>
-    <div class="arr1 array">
     </div>
 </div>
 ```
@@ -306,7 +306,7 @@ transforms to this xml
 test(data.inp, data.out, data.opts);
 ```
 
-### can add a class name to wrapping div with options {"className":"class-name"}
+### using options, can add a class name to wrapping div with options {"className":"class-name"}
  this json 
 ```json
 {

@@ -40,24 +40,24 @@ describe('json-to-divs-with-classes', function() {
         out: '<div><div class="name1">value1</div><div class="name2">value2</div></div>'
       }
       , {
-        message: 'handles sub properties',
+        message: 'handles sub-objects',
         inp: {'name1': 'value1', 'name2': {'sub-name': 'sub-value'}},
         out: '<div><div class="name1">value1</div><div class="name2"><div class="sub-name">sub-value</div></div></div>'
       }
       , {
-        message: 'handles sub-objects',
+        message: 'handles sub-sub-objects',
         inp: {'name1': 'value1', 'sub-obj1': {'sub-obj2': {'sub-obj-name': 'sub-obj-value'}}},
         out: '<div><div class="name1">value1</div><div class="sub-obj1"><div class="sub-obj2"><div class="sub-obj-name">sub-obj-value</div></div></div></div>'
       }
+     , {
+       message: 'handles empty array',
+       inp: {'arr1': []},
+       out: '<div><div class="arr1 array"></div></div>'
+     }
       , {
         message: 'handles array of one member',
         inp: {'arr1': ['1']},
         out: '<div><div class="arr1 array"><div class="arr1 member n0">1</div></div></div>'
-      }
-      , {
-        message: 'handles array with no members',
-        inp: {'arr1': []},
-        out: '<div><div class="arr1 array"></div></div>'
       }
       , {
         message: 'handles arrays with multiple members',
@@ -70,7 +70,7 @@ describe('json-to-divs-with-classes', function() {
         out: '<div><div class="arr1 array"><div class="arr1 member n0"><div class="a">b</div></div></div></div>'
       }
       , {
-        message: 'can add a class name to wrapping div',
+        message: 'using options, can add a class name to wrapping div',
         inp: {'arr1': ['1']},
         out: '<div class="class-name"><div class="arr1 array"><div class="arr1 member n0">1</div></div></div>',
         opts: {'className': 'class-name'}
