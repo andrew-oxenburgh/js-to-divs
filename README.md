@@ -12,57 +12,7 @@ It produces the html frag with no new lines or indentation. If you need this, tr
 
 ## Examples
 
-### Empty Object
-from: 
-```json
-{}
-```
-
-to: 
-```xml
-<div></div>
-```
-
-### Object with sub-objects
-from: 
-```json
-{
-    "name1": "value1", 
-    "name2": {
-        "sub-name": "sub-value"
-    }
-}
-```
-
-to: 
-
-```xml
-<div>
-    <div class="name1">value1</div>
-    <div class="name2">
-        <div class="sub-name">sub-value</div>
-    </div>
-</div>
-```
-
-### Object with an array
-from:
-```json
-{
-  "arr1": ["1"]
-}
-
-```
-
-to:
-```html
-
-<div>
-    <div class="arr1">
-        <div class="arr1-0">1</div>
-     </div>
-</div>
-```
+See [Specification](http://SPECIFICATION.html "Specification")
 
 # Demo
 
