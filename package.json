@@ -1,8 +1,15 @@
 {
   "name": "js-to-divs",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Given a js object, output a tree of divs that reflect it",
-  "keywords": ["js", "json", "transform", "div", "formatting", "browse"],
+  "keywords": [
+    "js",
+    "json",
+    "transform",
+    "div",
+    "formatting",
+    "browse"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "mocha .",
@@ -21,8 +28,11 @@
     "url": "https://github.com/andrew-oxenburgh/js-to-divs/issues",
     "email": "andrew.oxenburgh@gmail.com"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/andrew-oxenburgh/js-to-divs.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrew-oxenburgh/js-to-divs.git"
+  },
+  "dependencies": {
+    "xml-formatter": "^1.0.1"
   }
 }

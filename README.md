@@ -91,14 +91,7 @@ Maintain compatibility with node4+.
 
 Please run ```npm run qa```, for complete test and formatting checks
 
+# TODO:
 
-
-
-sample
-```json
-{ id: 'id1', name2: { id: 'id2' } }
-```
-
-```html
-<div id="id1"><div class="id">id1</div><div class="name2" id="id2"><div class="id">id2</div></div></div>
-```
+- [ ] Make me run from command line
+- [ ] Make me output all test cases into a cool file for documentation
