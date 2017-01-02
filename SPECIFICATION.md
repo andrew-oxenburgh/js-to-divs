@@ -1,11 +1,3 @@
-
-
-| hello | there |
-| --- | --- | --- |
-| 1 | and | all | 
-
-
-
 # TOC
    - [json-to-divs-with-classes](#json-to-divs-with-classes)
 <a name=""></a>
