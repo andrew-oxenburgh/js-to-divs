@@ -1,6 +1,6 @@
 {
   "name": "js-to-divs",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Given a js object, output a tree of divs that reflect it",
   "keywords": [
     "js",
