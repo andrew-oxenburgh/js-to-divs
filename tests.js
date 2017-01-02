@@ -20,6 +20,11 @@ describe('json-to-divs-with-classes', function() {
         out: '<div><div class="name">value</div></div>'
       },
       {
+        message: 'null object value',
+        inp: {'name': null},
+        out: '<div><div class="name">null</div></div>'
+      },
+      {
         message: 'single json property -> div with single value',
         inp: {'name': 'value'},
         out: '<div><div class="name">value</div></div>'
@@ -65,9 +70,9 @@ describe('json-to-divs-with-classes', function() {
         out: '<div><div class="arr1 array"><div class="arr1 member n0">1</div><div class="arr1 member n1">2</div></div></div>'
       }
       , {
-        message: 'handles an array of objects',
-        inp: {'arr1': [{'a': 'b'}]},
-        out: '<div><div class="arr1 array"><div class="arr1 member n0"><div class="a">b</div></div></div></div>'
+        message: 'handles array with null members',
+        inp: {'arr1': ['1', null]},
+        out: '<div><div class="arr1 array"><div class="arr1 member n0">1</div><div class="arr1 member n1">null</div></div></div>'
       }
       , {
         message: 'using options, can add a class name to wrapping div',

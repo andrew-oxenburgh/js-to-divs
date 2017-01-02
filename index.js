@@ -1,3 +1,5 @@
+'use strict';
+
 function appendValues(js, ret) {
   for (var prop in js) {
     if (!js.hasOwnProperty(prop)) {
@@ -7,7 +9,9 @@ function appendValues(js, ret) {
     if (typeof entry === 'function') {
       continue;
     }
-    if (Array.isArray(entry)) {
+    if (entry == null) {
+      ret += div('null', prop);
+    } else if (Array.isArray(entry)) {
       ret += div(appendArray(entry, prop, ''), prop + ' array');
     } else if (typeof entry === 'object') {
       ret += div(appendValues(entry, ''), prop, entry.id);
@@ -25,7 +29,9 @@ function arrayMemberName(className, off) {
 function appendArray(js, className, ret) {
   for (var off in js) {
     var entry = js[off];
-    if (typeof entry === 'object') {
+    if (entry == null) {
+      ret += div('null', arrayMemberName(className, off), js.id);
+    }else if (typeof entry === 'object') {
       ret += div(appendValues(entry, ''), arrayMemberName(className, off), js.id);
     }else {
       ret += div(entry, arrayMemberName(className, off), js.id);

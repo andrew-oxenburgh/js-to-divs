@@ -33,6 +33,23 @@ transforms to this xml
 ```
 .
 
+### null object value
+ this json 
+```json
+{
+  "name": null
+}
+```
+transforms to this xml
+```xml
+<div>
+    <div class="name">
+        null
+    </div>
+</div>
+```
+.
+
 ### single json property -> div with single value
  this json 
 ```json
@@ -221,14 +238,13 @@ transforms to this xml
 ```
 .
 
-### handles an array of objects
+### handles array with null members
  this json 
 ```json
 {
   "arr1": [
-    {
-      "a": "b"
-    }
+    "1",
+    null
   ]
 }
 ```
@@ -237,9 +253,10 @@ transforms to this xml
 <div>
     <div class="arr1 array">
         <div class="arr1 member n0">
-            <div class="a">
-                b
-            </div>
+            1
+        </div>
+        <div class="arr1 member n1">
+            null
         </div>
     </div>
 </div>
