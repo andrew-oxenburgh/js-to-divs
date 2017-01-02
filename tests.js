@@ -85,7 +85,7 @@ describe('json-to-divs-with-classes', function() {
   /* jshint ignore:start */
 
   tests.forEach(function(data) {
-    let inpFormatted = JSON.stringify(data.inp, null, '  ');
+    var inpFormatted = JSON.stringify(data.inp, null, '  ');
     var outFormatted = formatter(data.out.replace(/\"/g, '\''));
     var optsFormatted = data.opts ? (' with options ' + JSON.stringify(data.opts)) : '';
     it('### ' +
