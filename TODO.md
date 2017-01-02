@@ -1,2 +1,2 @@
 
-- [ ] link to travis from README.md
+- [X] link to travis from README.md
