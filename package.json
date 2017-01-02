@@ -1,6 +1,6 @@
 {
   "name": "js-to-divs",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "Given a js object, output a tree of divs that reflect it",
   "keywords": [
     "js",
@@ -12,15 +12,17 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test-both": "npm run test && npm run test-with-report && gsed -e '/^...js$/,+3d' SPECIFICATION.md -i",
+    "test-both": "npm run test && npm run test-with-report && npm run remove-unneeded-lines",
+    "remove-unneeded-lines": "gsed -e '/^...js$/,+3d' SPECIFICATION.md -i",
     "test": "mocha .",
     "test-with-report": "mocha . --reporter markdown > SPECIFICATION.md",
-    "qa": "rm -rf ./node_modules && npm i && npm test && jscs . && npm run test-with-report"
+    "qa": "rm -rf ./node_modules && npm i && npm test && jscs . && npm run test-with-report && npm run remove-unneeded-lines"
   },
   "license": "MIT",
   "devDependencies": {
     "mocha": "^3.2.0",
-    "should": "^11.1.2"
+    "should": "^11.1.2",
+    "xml-formatter": "^1.0.1"
   },
   "author": {
     "name": "Andrew Oxenburgh",
@@ -33,8 +35,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/andrew-oxenburgh/js-to-divs.git"
-  },
-  "dependencies": {
-    "xml-formatter": "^1.0.1"
   }
 }

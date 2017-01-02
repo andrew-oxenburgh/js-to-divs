@@ -98,7 +98,7 @@ describe('json-to-divs-with-classes', function() {
        'transforms to this xml' +
        '\n\`\`\`xml\n' +
        outFormatted +
-       '\n\`\`\`\n\n', function() {
+       '\n\`\`\`\n', function() {
       test(data.inp, data.out, data.opts);
     }
  )

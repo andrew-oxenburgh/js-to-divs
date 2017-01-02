@@ -14,7 +14,6 @@ transforms to this xml
 <div>
 </div>
 ```
-
 .
 
 ### null json return creates empty div
@@ -32,7 +31,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### single json property -> div with single value
@@ -50,7 +48,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles numeric properties
@@ -68,7 +65,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles string names
@@ -86,7 +82,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles multiple properties
@@ -108,7 +103,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles sub-objects
@@ -134,7 +128,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles sub-sub-objects
@@ -164,7 +157,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles empty array
@@ -181,7 +173,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles array of one member
@@ -203,7 +194,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles arrays with multiple members
@@ -229,7 +219,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### handles an array of objects
@@ -255,7 +244,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### using options, can add a class name to wrapping div with options {"className":"class-name"}
@@ -277,7 +265,6 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
 ### picks up a property 'id' and adds it to the div
@@ -303,6 +290,5 @@ transforms to this xml
     </div>
 </div>
 ```
-
 .
 
