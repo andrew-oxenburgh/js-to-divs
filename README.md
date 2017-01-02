@@ -34,6 +34,8 @@ This package has no production dependencies.
 
 Maintain compatibility with node4+.
 
+[CI is on Travis](https://travis-ci.org/andrew-oxenburgh/js-to-divs)
+
 # TODO:
 
 - [ ] Make me run from command line
