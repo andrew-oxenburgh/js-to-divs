@@ -1,3 +1,11 @@
+
+
+| hello | there |
+| - | --- | --- |
+| 1 | and | all | 
+
+
+
 # TOC
    - [json-to-divs-with-classes](#json-to-divs-with-classes)
 <a name=""></a>
@@ -17,10 +25,6 @@ transforms to this xml
 
 .
 
-```js
-test(data.inp, data.out, data.opts);
-```
-
 ### null json return creates empty div
  this json 
 ```json
@@ -38,10 +42,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### single json property -> div with single value
  this json 
@@ -61,10 +61,6 @@ transforms to this xml
 
 .
 
-```js
-test(data.inp, data.out, data.opts);
-```
-
 ### handles numeric properties
  this json 
 ```json
@@ -83,10 +79,6 @@ transforms to this xml
 
 .
 
-```js
-test(data.inp, data.out, data.opts);
-```
-
 ### handles string names
  this json 
 ```json
@@ -104,10 +96,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### handles multiple properties
  this json 
@@ -130,10 +118,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### handles sub-objects
  this json 
@@ -160,10 +144,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### handles sub-sub-objects
  this json 
@@ -195,10 +175,6 @@ transforms to this xml
 
 .
 
-```js
-test(data.inp, data.out, data.opts);
-```
-
 ### handles empty array
  this json 
 ```json
@@ -215,10 +191,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### handles array of one member
  this json 
@@ -241,10 +213,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### handles arrays with multiple members
  this json 
@@ -272,10 +240,6 @@ transforms to this xml
 
 .
 
-```js
-test(data.inp, data.out, data.opts);
-```
-
 ### handles an array of objects
  this json 
 ```json
@@ -302,10 +266,6 @@ transforms to this xml
 
 .
 
-```js
-test(data.inp, data.out, data.opts);
-```
-
 ### using options, can add a class name to wrapping div with options {"className":"class-name"}
  this json 
 ```json
@@ -327,10 +287,6 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
 ### picks up a property 'id' and adds it to the div
  this json 
@@ -357,8 +313,4 @@ transforms to this xml
 ```
 
 .
-
-```js
-test(data.inp, data.out, data.opts);
-```
 
