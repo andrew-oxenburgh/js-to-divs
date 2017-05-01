@@ -40,6 +40,11 @@ describe('json-to-divs-with-classes', function() {
         out: '<div><div class="name">2</div></div>'
       }
       , {
+        message: 'handles string names, replacing spaces with underscores',
+        inp: {'name with space': 2},
+        out: '<div><div class="name_with_space">2</div></div>'
+      }
+      , {
         message: 'handles multiple properties',
         inp: {'name1': 'value1', 'name2': 'value2'},
         out: '<div><div class="name1">value1</div><div class="name2">value2</div></div>'

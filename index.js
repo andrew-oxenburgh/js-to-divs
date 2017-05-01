@@ -6,10 +6,11 @@ function appendValues(js, ret) {
       continue;
     }
     var entry = js[prop];
+    prop = prop.replace(/ /g, '_');
     if (typeof entry === 'function') {
       continue;
     }
-    if (entry == null) {
+    if (entry === null) {
       ret += div('null', prop);
     } else if (Array.isArray(entry)) {
       ret += div(appendArray(entry, prop, ''), prop + ' array');
@@ -49,7 +50,7 @@ function div(str, className, id) {
 
 function json_to_div(js, opts) {
   opts = opts || {className: ''};
-  if (js == null) {
+  if (js === null) {
     return div('', opts.className);
   }
 

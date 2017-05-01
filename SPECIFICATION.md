@@ -101,6 +101,23 @@ transforms to this xml
 ```
 .
 
+### handles string names, replacing spaces with underscores
+ this json 
+```json
+{
+  "name with space": 2
+}
+```
+transforms to this xml
+```xml
+<div>
+    <div class="name_with_space">
+        2
+    </div>
+</div>
+```
+.
+
 ### handles multiple properties
  this json 
 ```json
